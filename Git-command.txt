@@ -1,0 +1,45 @@
+// to add the remote config
+git remote add origin http://github.com/abc/bel.git
+
+// to verify that the remote repo was added to your configuration
+git remote -v capstone
+
+
+// to create git branch and auto switch to the newly created branch
+git checkout -b <branch-name>
+
+// To switch between different branch 
+git checkout <branch-name>
+
+// List all the branch 
+git branch -a
+
+// create git branch from and switch to the created branch
+git checkout -b <branch-name> <tag-name>
+
+// push branch to remote branch 
+// should be on the branch wanna push
+git push <remote> <branch-name>
+
+// push branch to another branch
+git push <remote> <local_branch>:<remote_name>
+
+// before pushing, make sure to pull the changes from the remote branch and integrate them with your current local branch
+git pull
+git checkout my-feature
+git merge origin/feature
+
+
+// What to do when push dev branch into master branch
+
+git pull <remote> <branch>
+(on branch development) $ git merge master
+(resolve any conflicts if there are any)
+git checkout master
+git merge development
+
+git fetch origin master (update master branch with upstream branch)
+
+git merge master (pull those changes from master into development)
+
+git push origin development:master (pushes the development branch (now fully merged with master) up to origin/master.)
