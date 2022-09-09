@@ -43,3 +43,13 @@ git fetch origin master (update master branch with upstream branch)
 git merge master (pull those changes from master into development)
 
 git push origin development:master (pushes the development branch (now fully merged with master) up to origin/master.)
+
+
+/* Create new Repo and push file to remote */
+echo "# Prog_note" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/tranthe-sudo/Prog_note.git
+git push -u origin main
